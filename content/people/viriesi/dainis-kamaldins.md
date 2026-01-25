@@ -1,0 +1,19 @@
+---
+title: "Dainis Kamaldiņš"
+weight: 12
+date: 1967-01-02
+status: "Miris"
+deathDate: "2003"
+---
+
+# Dainis Kamaldiņš
+
+{{< callout type="warning" >}}
+**Dzīves dati:** 1967 – 2003
+{{< /callout >}}
+
+**Dainis Kamaldiņš** bija Kamaldiņu dzimtas pārstāvis, kura atdusas vieta, visticamāk, ir Lieljanču kapos (Bauskas novads).
+
+## Vēsture
+
+Dainis ir apbedīts līdzās Petram Šimam (1933–2012), kas norāda uz iespējamām radniecības saitēm ar Šimu dzimtu (mātes līniju vai laulību). Viņa klātbūtne Zemgalē liecina par dzimtas migrāciju uz dienvidiem padomju vai pēcpadomju periodā.

@@ -1,0 +1,67 @@
+# Kamaldiņu Dzimta — kamaldins.com
+# =================================
+baseURL: "https://kamaldins.com/"
+title: "Kamaldiņu Dzimta"
+languageCode: lv
+defaultContentLanguage: lv
+
+# Performance
+minify:
+  minifyOutput: true
+
+# Markdown
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# Search output
+outputs:
+  home: [HTML, RSS, JSON]
+
+# Navigation
+menu:
+  main:
+    - name: Saknes
+      pageRef: /history
+      weight: 1
+    - name: Vieta
+      pageRef: /place
+      weight: 2
+    - name: Cilvēki
+      pageRef: /people
+      weight: 3
+    - name: Arhīvs
+      pageRef: /archive
+      weight: 4
+    - name: Iestatījumi
+      pageRef: /settings
+      weight: 5
+
+# Theme settings
+params:
+  description: "Kamaldiņu dzimtas digitālais arhīvs. Vēstures, dokumentu un ģenealoģijas enciklopēdija no Vidzemes līdz Daugmalei."
+  author: "Valters Kamaldiņš"
+  images: ["/images/archive/aldis-godaplaksne.jpg"]
+  
+  theme:
+    default: dark
+    displayToggle: true
+  
+  navbar:
+    displayTitle: true
+    displayLogo: false
+  
+  search:
+    enable: true
+    type: flexsearch
+  
+  footer:
+    displayCopyright: true
+    displayPoweredBy: false
+    copyright: "© 2026 Valters Kamaldiņš • [Kamaltek](https://kamaltek.com) • v1.0.0"
+
+# Hugo Module
+module:
+  imports:
+    - path: github.com/imfing/hextra
