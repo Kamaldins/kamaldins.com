@@ -20,11 +20,24 @@ outputs:
   home: [HTML, RSS, JSON]
 
 # SEO
+# SEO
 enableRobotsTXT: true
+enableGitInfo: true
 sitemap:
   changefreq: monthly
   filename: sitemap.xml
   priority: 0.5
+
+frontmatter:
+  date:
+    - date
+    - publishDate
+    - lastmod
+  lastmod:
+    - :git
+    - lastmod
+    - :fileModTime
+    - :default
 
 # Navigation
 menu:
