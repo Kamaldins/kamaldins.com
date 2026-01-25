@@ -7,14 +7,14 @@ summary: "Kamaldiņu dzimtas digitālais arhīvs un vēstures enciklopēdija."
 <style>
 .homepage-hero {
   text-align: left;
-  padding: 3rem 1rem 0.5rem; /* Reduced top/bottom padding */
+  padding: 3rem 1rem 1.5rem; /* Restored some breathing room */
   max-width: 100%;
 }
 .homepage-hero h1 {
   font-family: var(--font-serif);
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 600;
-  margin-bottom: 0.5rem; /* Reduced margin */
+  margin-bottom: 0.75rem;
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
@@ -24,27 +24,27 @@ summary: "Kamaldiņu dzimtas digitālais arhīvs un vēstures enciklopēdija."
   line-height: 1.5;
   color: #e5e7eb;
   opacity: 1;
-  margin-bottom: 1rem; /* Reduced margin */
-  max-width: 600px; /* Slightly narrower for readability */
+  margin-bottom: 1.5rem; /* Restored some margin */
+  max-width: 600px;
 }
 .homepage-grid-container {
   display: grid;
   grid-template-columns: 1fr; 
-  gap: 0.75rem; /* Further reduced gap */
+  gap: 1rem; /* Relaxed gap for mobile */
   margin-top: 1rem;
-  margin-bottom: 0; /* No space before footer */
+  margin-bottom: 2rem; /* Restored bottom margin */
 }
 @media (min-width: 768px) {
   .homepage-grid-container {
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
     align-items: start;
   }
 }
 .homepage-column {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem; /* Very tight vertical stack */
+  gap: 1rem; /* Relaxed vertical stack */
 }
 </style>
 

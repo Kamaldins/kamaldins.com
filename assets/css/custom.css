@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+/* Fonts moved to head for performance */
 
 :root {
     --primary-color: #007aff;
@@ -8,8 +8,8 @@
 
     /* Unified readable font stack */
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-    --font-serif: 'Inter', system-ui, -apple-system, sans-serif;
-    /* Override serif to standard sans for readability */
+    --font-serif: 'Cormorant Garamond', serif;
+    /* Professional, beautiful archival serif */
 }
 
 .dark {
@@ -161,18 +161,16 @@
 }
 
 /* --- Archival Design Overrides --- */
+/* Note: Font variables consolidated in first :root block above */
 
-:root {
-    --font-serif: "Georgia", "Times New Roman", "Times", serif;
-    --font-sans: "Inter", system-ui, -apple-system, sans-serif;
-
-    /* Elegant, archival colors */
+/* Archival Colors */
+.archival-colors {
     --color-paper: #fdfbf7;
     /* Warm white */
     --color-ink: #1a1a1a;
     /* Soft black */
     --color-accent: #8b4513;
-    /* Saddle Brown - respectful accent */
+    /* Saddle Brown */
 }
 
 /* Archival Typography */

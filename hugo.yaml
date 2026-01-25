@@ -20,7 +20,6 @@ outputs:
   home: [HTML, RSS, JSON]
 
 # SEO
-# SEO
 enableRobotsTXT: true
 enableGitInfo: true
 sitemap:

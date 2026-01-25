@@ -1,9 +1,12 @@
-<div class="hx:flex hx:items-center hx:gap-4 hx:text-base hx:font-medium hx:text-gray-600 hx:dark:text-gray-400">
-  <a href="/about" class="hx:hover:text-primary-600 hx:transition-colors">Par Mums</a>
-  <span class="hx:opacity-30">|</span>
-  <a href="/history" class="hx:hover:text-primary-600 hx:transition-colors">Vēsture</a>
-  <span class="hx:opacity-30">|</span>
-  <a href="/privacy" class="hx:hover:text-primary-600 hx:transition-colors">Privātums</a>
-  <span class="hx:opacity-30">|</span>
-  <a href="/contact" class="hx:hover:text-primary-600 hx:transition-colors">Kontakti</a>
-</div>
+{{- /* This overrides custom/footer.html to render links cleanly */ -}}
+{{- /* Mobile: Stacks vertically. Desktop: Row with subtle separators */ -}}
+
+<nav class="hx:py-4" aria-label="Footer navigation">
+  <ul
+    class="hx:flex hx:flex-wrap hx:justify-center hx:gap-x-6 hx:gap-y-2 hx:text-sm hx:text-gray-600 hx:dark:text-gray-400">
+    <li><a href="/about" class="hx:hover:text-primary-600 hx:transition-colors">Par Mums</a></li>
+    <li><a href="/history" class="hx:hover:text-primary-600 hx:transition-colors">Vēsture</a></li>
+    <li><a href="/privacy" class="hx:hover:text-primary-600 hx:transition-colors">Privātums</a></li>
+    <li><a href="/contact" class="hx:hover:text-primary-600 hx:transition-colors">Kontakti</a></li>
+  </ul>
+</nav>
