@@ -19,6 +19,13 @@ markup:
 outputs:
   home: [HTML, RSS, JSON]
 
+# SEO
+enableRobotsTXT: true
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
+  priority: 0.5
+
 # Navigation
 menu:
   main:
