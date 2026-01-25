@@ -1,10 +1,15 @@
-/* Accessibility Styles matching Hextra Theme */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
     --primary-color: #007aff;
     --bg-secondary: #f3f4f6;
     /* light mode fallback */
     --border-color: #e5e7eb;
+
+    /* Unified readable font stack */
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-serif: 'Inter', system-ui, -apple-system, sans-serif;
+    /* Override serif to standard sans for readability */
 }
 
 .dark {
