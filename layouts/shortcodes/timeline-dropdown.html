@@ -1,0 +1,36 @@
+{{- $title := .Get "title" -}}
+{{- $subtitle := .Get "subtitle" -}}
+{{- $icon := .Get "icon" | default "clock" -}}
+{{- $closed := .Get "closed" | default true -}}
+
+<details
+    class="hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 dark:hx-border-neutral-800 hx-transition-all hover:hx-shadow-lg hx-mb-4"
+    {{ if eq $closed "false" }}open{{ end }}>
+    <summary
+        class="hx-flex hx-items-center hx-cursor-pointer hx-p-4 hx-list-none [&::-webkit-details-marker]:hx-hidden">
+        {{- /* Icon */ -}}
+        <div class="hx-mr-4 hx-text-gray-600 dark:hx-text-gray-400">
+            {{ partial "utils/icon.html" (dict "name" $icon "attributes" "height=24") }}
+        </div>
+
+        {{- /* Text Content */ -}}
+        <div class="hx-flex-grow">
+            {{- with $title -}}
+            <div class="hx-font-bold hx-text-lg">{{ . }}</div>
+            {{- end -}}
+            {{- with $subtitle -}}
+            <div class="hx-text-sm hx-text-gray-500 hx-font-semibold">{{ . }}</div>
+            {{- end -}}
+        </div>
+
+        {{- /* Chevron Icon (Rotates on open) */ -}}
+        <div class="hx-transition-transform hx-duration-200 group-open:hx-rotate-180 hx-text-gray-400">
+            {{ partial "utils/icon.html" (dict "name" "chevron-down" "attributes" "height=20") }}
+        </div>
+    </summary>
+
+    <div
+        class="hx-p-4 hx-pt-0 hx-text-sm hx-text-gray-600 dark:hx-text-gray-400 hx-border-t hx-border-gray-100 dark:hx-border-neutral-800">
+        {{ .Inner | markdownify }}
+    </div>
+</details>

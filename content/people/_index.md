@@ -1,3 +1,4 @@
+---
 title: "Cilvēki"
 weight: 3
 sidebar:

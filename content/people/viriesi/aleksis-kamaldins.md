@@ -1,3 +1,4 @@
+---
 title: "Aleksis Kamaldiņš"
 weight: 40
 date: 2002-01-01

@@ -1,0 +1,35 @@
+{{- $copyright := .Site.Params.footer.copyright | markdownify -}}
+
+<div
+  class="mx-auto flex max-w-[90rem] flex-col items-center justify-center py-8 text-center text-sm text-gray-600 dark:text-gray-400 pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-left),1.5rem)]">
+
+  {{/* Horizontal Rule Separator */}}
+  <hr class="w-full border-t border-gray-200 dark:border-neutral-800 mb-8" />
+
+  {{/* Navigation Links */}}
+  <div class="flex gap-6 mb-4 text-xs uppercase tracking-wider font-medium opacity-80">
+    <a href="/about" class="hover:underline hover:opacity-100 transition-opacity">Par Mums</a>
+    <a href="/history" class="hover:underline hover:opacity-100 transition-opacity">Vēsture</a>
+    <a href="/privacy" class="hover:underline hover:opacity-100 transition-opacity">Privātums</a>
+    <a href="/contact" class="hover:underline hover:opacity-100 transition-opacity">Kontakti</a>
+  </div>
+
+  {{/* Copyright Section */}}
+  <div class="text-[10px] opacity-60 flex flex-col items-center gap-4">
+    {{ if .Site.Params.footer.displayCopyright }}
+    {{ if $copyright }}
+    {{ $copyright }}
+    {{ else }}
+    © {{ now.Year }} {{ .Site.Params.author | default .Site.Title }}
+    {{ end }}
+    {{ end }}
+
+    {{/* Theme Toggle */}}
+    <div class="opacity-80 hover:opacity-100 transition-opacity">
+      {{ partial "theme-toggle.html" (dict "iconHeight" 14 "class" "hx:text-gray-500 hx:dark:text-gray-400
+      hx:hover:text-gray-900 hx:dark:hover:text-gray-100") }}
+    </div>
+  </div>
+
+
+</div>

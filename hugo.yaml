@@ -44,6 +44,12 @@ params:
   author: "Valters Kamaldiņš"
   images: ["/images/archive/aldis-godaplaksne.jpg"]
   
+  # Open Graph / Social Previews
+  og:
+    title: "Kamaldiņu Dzimta — Digitālais Arhīvs"
+    description: "Dzimtas vēstures un ģenealoģijas enciklopēdija. No Vidzemes līdz Daugmalei."
+    locale: "lv_LV"
+  
   theme:
     default: dark
     displayToggle: true
@@ -65,3 +71,4 @@ params:
 module:
   imports:
     - path: github.com/imfing/hextra
+

@@ -1,0 +1,16 @@
+{{- $title := .Get "title" -}}
+{{- $subtitle := .Get "subtitle" -}}
+{{- $class := .Get "class" -}}
+
+<div
+    class="hextra-card hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-p-4 hx-transition-all hover:hx-shadow-lg dark:hx-border-neutral-800 {{ $class }}">
+    {{- with $title -}}
+    <div class="hx-font-bold hx-text-lg hx-mb-1">{{ . }}</div>
+    {{- end -}}
+    {{- with $subtitle -}}
+    <div class="hx-text-sm hx-text-gray-500 hx-font-semibold hx-mb-2">{{ . }}</div>
+    {{- end -}}
+    <div class="hx-text-sm hx-text-gray-600 dark:hx-text-gray-400">
+        {{ .Inner | markdownify }}
+    </div>
+</div>

@@ -1,10 +1,9 @@
+---
 title: "Vēsture: No Upes līdz Uzvārdam"
 weight: 1
 sidebar:
   open: true
 ---
-
-# Vēsture: No Upes līdz Uzvārdam
 
 {{< callout type="info" >}}
 **Kamaldiņu uzvārds ir cieši saistīts ar Vidzemes ģeogrāfiju**
@@ -13,8 +12,6 @@ sidebar:
 Neliela upīte, kas līkumo cauri Gulbenes novadam, un dzelzceļa stacija, kas savulaik nesa šo pašu vārdu — šīs ir mūsu saknes.
 
 ---
-
-## Izpētiet Vēsturi
 
 ## Izpētiet Vēsturi
 

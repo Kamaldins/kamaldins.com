@@ -154,3 +154,92 @@
 .btn-reset:hover {
     background-color: #dc2626;
 }
+
+/* --- Archival Design Overrides --- */
+
+:root {
+    --font-serif: "Georgia", "Times New Roman", "Times", serif;
+    --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+    /* Elegant, archival colors */
+    --color-paper: #fdfbf7;
+    /* Warm white */
+    --color-ink: #1a1a1a;
+    /* Soft black */
+    --color-accent: #8b4513;
+    /* Saddle Brown - respectful accent */
+}
+
+/* Archival Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.hx-hero-headline {
+    font-family: var(--font-serif) !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.02em;
+}
+
+/* Body text refinement */
+body {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+}
+
+/* Hero Section adjustments */
+.hx-hero-headline {
+    font-size: 3.5rem !important;
+    /* Larger, more impactful */
+    line-height: 1.1;
+    color: var(--color-ink);
+}
+
+.dark .hx-hero-headline {
+    color: #e5e7eb;
+}
+
+/* Card Overrides - "Respectful & Clean" */
+.hextra-card {
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    background: transparent !important;
+    /* Remove heavy backgrounds */
+    box-shadow: none !important;
+    /* Remove "popup" shadow */
+    transition: all 0.2s ease;
+}
+
+.hextra-card:hover {
+    border-color: var(--color-accent) !important;
+    background: rgba(0, 0, 0, 0.02) !important;
+    transform: translateY(-2px);
+}
+
+.dark .hextra-card {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .hextra-card:hover {
+    border-color: #d1d5db !important;
+    /* Lighter gray hover in dark mode */
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Consistent Card Sizing */
+.hextra-card {
+    min-height: 80px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+/* Ensure cards in grid have equal height */
+.hextra-cards {
+    align-items: stretch !important;
+}
+
+.hextra-cards .hextra-card {
+    height: 100% !important;
+}

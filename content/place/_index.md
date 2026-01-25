@@ -1,3 +1,4 @@
+---
 title: "Vieta"
 weight: 2
 sidebar:
