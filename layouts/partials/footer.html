@@ -60,3 +60,62 @@
     </span>
 </a>
 {{- end -}}
+
+<!-- SVG Progress Scroll Button -->
+<div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+</div>
+
+<script>
+    (function () {
+        var progressPath = document.querySelector('.progress-wrap path');
+        var pathLength = progressPath.getTotalLength();
+
+        // Set up CSS transition
+        progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+        progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+        progressPath.style.strokeDashoffset = pathLength;
+        progressPath.getBoundingClientRect();
+        progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+
+        function updateProgress() {
+            // Calculate scroll percentage
+            var scroll = window.scrollY || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var progress = pathLength - (scroll * pathLength / height);
+            progressPath.style.strokeDashoffset = progress;
+
+            // Toggle visibility
+            var scrollWrap = document.querySelector('.progress-wrap');
+            if (scroll > 50) {
+                scrollWrap.classList.add('active-progress');
+            } else {
+                scrollWrap.classList.remove('active-progress');
+            }
+        }
+
+        // Initial update
+        updateProgress();
+
+        // Optimized scroll listener
+        var ticking = false;
+        window.addEventListener('scroll', function () {
+            if (!ticking) {
+                window.requestAnimationFrame(function () {
+                    updateProgress();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+
+        // Smooth scroll to top
+        document.querySelector('.progress-wrap').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return false;
+        });
+    })();
+</script>

@@ -1,6 +1,8 @@
 ---
 title: "Vīrieši"
 weight: 1
+cascade:
+  sort_by: Title
 sidebar:
   open: true
 ---

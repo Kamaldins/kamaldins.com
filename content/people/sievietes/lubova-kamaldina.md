@@ -1,18 +1,18 @@
 ---
-title: "Ļuba Kamaldiņa"
+title: "Ļubova Kamaldiņa"
 weight: 2
 date: 1960-01-01
 status: "Dzīvs"
 ---
 
-# Ļuba Kamaldiņa
+# Ļubova Kamaldiņa
 
 {{< callout type="info" >}}
 **Loma:** Dzimtas Māte, Sieva
 **Statuss:** Alda Kamaldiņa dzīvesbiedre (30+ gadi)
 {{< /callout >}}
 
-**Ļuba Kamaldiņa** ir apbrīnojama sieviete ar spēcīgu dzīvesstāstu, kura ienākusi dzimtā un kļuvusi par tās neatņemamu daļu.
+**Ļubova Kamaldiņa** ir apbrīnojama sieviete ar spēcīgu dzīvesstāstu, kura ienākusi dzimtā un kļuvusi par tās neatņemamu daļu.
 
 ## Dzīvesgājums
 *   **Izcelsme:** Dzimusi Karēlijā (Krievijā).

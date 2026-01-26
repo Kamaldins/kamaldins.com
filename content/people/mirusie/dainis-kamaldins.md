@@ -17,3 +17,10 @@ deathDate: "2003"
 ## Vēsture
 
 Dainis ir apbedīts līdzās Petram Šimam (1933–2012), kas norāda uz iespējamām radniecības saitēm ar Šimu dzimtu (mātes līniju vai laulību). Viņa klātbūtne Zemgalē liecina par dzimtas migrāciju uz dienvidiem padomju vai pēcpadomju periodā.
+
+## Radniecība
+
+| Dati | Informācija |
+|------|-------------|
+| **Sieva** | Privāts |
+| **Bērni** | Laura Kamaldiņa un citi |

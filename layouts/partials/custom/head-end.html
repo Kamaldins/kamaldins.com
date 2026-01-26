@@ -44,3 +44,24 @@
 <!-- <link rel="manifest" href="/site.webmanifest"> -->
 <meta name="msapplication-TileColor" content="#1f2937">
 <meta name="theme-color" content="#1f2937">
+
+<!-- Back Button Injection -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Only show if there is history
+    if (window.history.length > 1) {
+      var target = document.querySelector('h1');
+      if (target) {
+        var btn = document.createElement('button');
+        btn.innerHTML = '← Atpakaļ';
+        btn.className = 'hx:text-sm hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:mb-4 hx:inline-block hx:cursor-pointer hx:transition-colors';
+        btn.style.marginTop = '-10px';
+        btn.style.display = 'block';
+        btn.onclick = function () {
+          window.history.back();
+        };
+        target.parentNode.insertBefore(btn, target);
+      }
+    }
+  });
+</script>

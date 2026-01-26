@@ -1,6 +1,8 @@
 ---
 title: "Sievietes"
 weight: 2
+cascade:
+  sort_by: Title
 sidebar:
   open: true
 ---
