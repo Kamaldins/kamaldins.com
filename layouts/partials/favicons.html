@@ -1,0 +1,8 @@
+{{- /*
+Override of Hextra's default favicons.html
+This ensures we ONLY load the project-level favicon.ico
+and do not leak the Hextra default SVG and PNG fallback icons.
+*/ -}}
+<link rel="icon shortcut" href="{{ " favicon.ico" | relURL }}" sizes="any" />
+<link rel="icon" href="{{ " logo.svg" | relURL }}" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="{{ " logo.svg" | relURL }}" />
