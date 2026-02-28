@@ -3,8 +3,11 @@
 :root {
     --primary-color: #007aff;
     --bg-secondary: #f3f4f6;
-    /* light mode fallback */
-    --border-color: #e5e7eb;
+    /* Soft archival default light mode */
+    --border-color: #eae1d9;
+    --nextra-bg: #fcfaf8;
+    --nextra-primary-hue: 30;
+    /* Hextra/Nextra warm tone overrides */
 
     /* Unified readable font stack */
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
@@ -13,8 +16,10 @@
 }
 
 .dark {
-    --bg-secondary: #1f2937;
-    --border-color: #374151;
+    --bg-secondary: #1a1a1f;
+    --border-color: #27272a;
+    --nextra-bg: #09090b;
+    /* Deep OLED-friendly dark mode */
 }
 
 /* Base Accessibility Modes */
@@ -186,10 +191,38 @@ h6,
     letter-spacing: -0.02em;
 }
 
-/* Body text refinement */
+/* Body text refinement - Increased Readability */
 body {
     font-family: var(--font-sans);
-    line-height: 1.6;
+    font-size: 1.0625rem;
+    /* ~17px for vastly improved readability */
+    line-height: 1.7;
+    color: #2c2925;
+    background-color: var(--nextra-bg);
+}
+
+.dark body {
+    color: #e4e4e7;
+    /* crisp but soft off-white text */
+    background-color: var(--nextra-bg);
+}
+
+/* Footer Improvements */
+.hextra-custom-footer {
+    padding-top: 1.5rem;
+}
+
+.hextra-custom-footer a {
+    transition: color 0.15s ease;
+}
+
+.hextra-footer .hx\:text-xs {
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+.dark .hextra-footer .hx\:text-xs {
+    color: #9ca3af;
 }
 
 /* Image and Logo Sizing Fixes */
@@ -219,26 +252,24 @@ img {
 /* Card Overrides - "Respectful & Clean" */
 .hextra-card {
     border: 1px solid rgba(0, 0, 0, 0.08) !important;
-    background: transparent !important;
-    /* Remove heavy backgrounds */
-    box-shadow: none !important;
-    /* Remove "popup" shadow */
+    background: rgba(255, 255, 255, 0.6) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
     transition: all 0.2s ease;
 }
 
 .hextra-card:hover {
     border-color: var(--color-accent) !important;
-    background: rgba(0, 0, 0, 0.02) !important;
+    background: rgba(255, 255, 255, 0.9) !important;
     transform: translateY(-2px);
 }
 
 .dark .hextra-card {
+    background: rgba(30, 30, 32, 0.4) !important;
     border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 .dark .hextra-card:hover {
     border-color: #d1d5db !important;
-    /* Lighter gray hover in dark mode */
     background: rgba(255, 255, 255, 0.05) !important;
 }
 
@@ -255,30 +286,36 @@ img {
     align-items: stretch !important;
 }
 
-/* --- SVG Progress Circle Back to Top --- */
+/* --- Apple-style Glassmorphic Back to Top --- */
 .progress-wrap {
     position: fixed;
     right: 2rem;
     bottom: 2rem;
-    height: 46px;
-    width: 46px;
+    height: 44px;
+    width: 44px;
     cursor: pointer;
-    display: block;
-    border-radius: 50px;
-    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.1);
-    /* Subtle border ring */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     z-index: 10000;
     opacity: 0;
     visibility: hidden;
     transform: translateY(15px);
-    transition: all 200ms linear;
-    color: var(--color-ink, #333);
-    /* Arrow color */
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    color: #333;
+    padding: 0;
 }
 
 .dark .progress-wrap {
-    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.1);
-    /* Dark mode subtle ring */
+    background: rgba(30, 30, 32, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     color: #e5e7eb;
 }
 
@@ -288,69 +325,12 @@ img {
     transform: translateY(0);
 }
 
-/* The arrow icon inside */
-.progress-wrap::after {
-    position: absolute;
-    /* Use a simple arrow character or font icon equivalent */
-    content: '↑';
-    font-family: var(--font-sans);
-    font-weight: bold;
-    text-align: center;
-    line-height: 46px;
-    font-size: 20px;
-    left: 0;
-    top: 0;
-    height: 46px;
-    width: 46px;
-    cursor: pointer;
-    display: block;
-    z-index: 1;
-    transition: all 200ms linear;
+.progress-wrap:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-.progress-wrap:hover::after {
-    opacity: 0;
-}
-
-/* The hover state arrow (colored) */
-.progress-wrap::before {
-    position: absolute;
-    content: '↑';
-    font-family: var(--font-sans);
-    font-weight: bold;
-    text-align: center;
-    line-height: 46px;
-    font-size: 20px;
-    opacity: 0;
-    color: var(--color-accent, #8b4513);
-    /* Hextra accent color */
-    left: 0;
-    top: 0;
-    height: 46px;
-    width: 46px;
-    cursor: pointer;
-    display: block;
-    z-index: 2;
-    transition: all 200ms linear;
-}
-
-.progress-wrap:hover::before {
-    opacity: 1;
-}
-
-.progress-wrap svg path {
-    fill: none;
-}
-
-.progress-wrap svg.progress-circle path {
-    stroke: var(--color-ink, #333);
-    /* Default stroke */
-    stroke-width: 4;
-    box-sizing: border-box;
-    transition: all 200ms linear;
-}
-
-.dark .progress-wrap svg.progress-circle path {
-    stroke: #e5e7eb;
-    /* Dark mode stroke */
+.dark .progress-wrap:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    background: rgba(40, 40, 45, 0.8);
 }

@@ -17,6 +17,7 @@ Neliela upīte, kas līkumo cauri Gulbenes novadam, un dzelzceļa stacija, kas s
 
 {{< cards >}}
   {{< card link="hronologija" title="Hronoloģija" subtitle="Notikumu laika līnija (1826–2026)" icon="clock" >}}
+  {{< card link="petijums" title="Pētījums" subtitle="Ģenealoģiskais, vēsturiskais un sociāldemogrāfiskais pētījums" icon="map" >}}
   {{< card link="etimologija" title="Etimoloģija" subtitle="Uzvārda lingvistiskā izcelsme" icon="translate" >}}
   {{< card link="talava" title="Tālava" subtitle="Dzelzs laikmeta dzimtene" icon="library" >}}
   {{< card link="monograph" title="Monogrāfija" subtitle="Pilns akadēmiskais teksts (EN)" icon="book-open" >}}
