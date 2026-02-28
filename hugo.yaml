@@ -91,7 +91,7 @@ params:
   footer:
     displayCopyright: true
     displayPoweredBy: false
-    copyright: "© 2026 Valters Kamaldiņš • [Kamaltek](https://kamaltek.com) • v1.0.0"
+    copyright: "© 2026 Valters Kamaldiņš • Viss saturs ir autortiesību aizsargāts un to nedrīkst izmantot bez atsauces uz [kamaldins.com](https://kamaldins.com) • [Kamaltek](https://kamaltek.com) • v1.0.0"
 
 # Hugo Module
 module:

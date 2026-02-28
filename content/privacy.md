@@ -11,6 +11,7 @@ title: "Privātums"
 ## Ko Mēs Nedarām
 
 *   **Neievācam personīgos datus.** Vietne nav paredzēta reģistrācijai vai pieteikšanās.
+*   **Aizliegts pārpublicēt bez atsauces.** Visam saturam (tekstiem, fotoattēliem) obligāti jāpievieno atsauce uz šo vietni (kamaldins.com). Pārpublicēšana komerciāliem mērķiem ir stingri aizliegta bez rakstiskas piekrišanas.
 *   **Nepārdodam informāciju.** Nekādi dati netiek nodoti trešajām pusēm.
 *   **Nesekojam individuāliem lietotājiem.** Nav reklāmu, nav mērķēšanas.
 

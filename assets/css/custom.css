@@ -192,6 +192,18 @@ body {
     line-height: 1.6;
 }
 
+/* Image and Logo Sizing Fixes */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hx-nav-container img[src*="logo.svg"],
+.hx-sidebar-logo img[src*="logo.svg"] {
+    max-height: 48px;
+    width: auto;
+}
+
 /* Hero Section adjustments */
 .hx-hero-headline {
     font-size: 3.5rem !important;
